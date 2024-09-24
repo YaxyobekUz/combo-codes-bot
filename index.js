@@ -226,9 +226,6 @@ bot.on("message", (msg) => {
     }
 
     else if (checkState("awaiting_riddle_combo")) {
-console.log(msg);
-
-
       if (msg.photo) {
         // time
         const date = new Date();
