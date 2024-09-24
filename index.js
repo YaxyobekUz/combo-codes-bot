@@ -177,7 +177,7 @@ bot.on("message", (msg) => {
 
         // post caption
         const title = "Puzzle durov 🧩";
-        const description = `Oxirgi yangilanish 🕔\n*${time}*`;
+        const description = `🕔 *${time}*`;
 
         // update combo
         puzzleDurov.content = msg.photo.pop().file_id;
@@ -226,14 +226,17 @@ bot.on("message", (msg) => {
     }
 
     else if (checkState("awaiting_riddle_combo")) {
+console.log(msg);
+
+
       if (msg.photo) {
         // time
         const date = new Date();
         const time = date.toLocaleString("en-US", { timeZone: "Asia/Tashkent" });
 
         // post caption
-        const title = "Kun topishmog'ini yangilash 🔄";
-        const description = `Oxirgi yangilanish 🕔\n*${time}*`;
+        const title = "Kun topishmog'i ❓";
+        const description = `*Topishmoq javobi:* \`${msg.caption}\`\n\n🕔 *${time}*`;
 
         // update combo
         riddle.content = msg.photo.pop().file_id;
@@ -254,8 +257,8 @@ bot.on("message", (msg) => {
         const time = date.toLocaleString("en-US", { timeZone: "Asia/Tashkent" });
 
         // post caption
-        const title = "Kun rebusini yangilash 🔄";
-        const description = `Oxirgi yangilanish 🕔\n*${time}*`;
+        const title = "Kun rebusi 🔍";
+        const description = `*Rebus javobi:* \`${msg.caption}\`\n\n🕔 *${time}*`;
 
         // update combo
         rebus.content = msg.photo.pop().file_id;
@@ -276,8 +279,8 @@ bot.on("message", (msg) => {
         const time = date.toLocaleString("en-US", { timeZone: "Asia/Tashkent" });
 
         // post caption
-        const title = "Kun investitsiyasi yangilash 🔄";
-        const description = `Oxirgi yangilanish 🕔\n*${time}*`;
+        const title = "Kun investitsiyasi 💵";
+        const description = `🕔 *${time}*`;
 
         // update combo
         invest.content = msg.photo.pop().file_id;
@@ -300,7 +303,7 @@ bot.on("message", (msg) => {
 
         // post caption
         const title = "Shifer 🗝";
-        const description = `Oxirgi yangilanish 🕔\n*${time}*`;
+        const description = `🕔 *${time}*`;
 
         // update combo
         yaytsogramCombo.content = msg.photo.pop().file_id;
